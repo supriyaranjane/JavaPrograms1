@@ -11,7 +11,6 @@
 
 package com.bridgelabz.functional;
 
-import java.util.Scanner;
 
 import com.bridgelabz.utility.Utility;
 
@@ -21,18 +20,16 @@ public class IntOpt {
 	public static void main(String args[]) {
 		
      int a,b,c,value=0,num,result;
-     Scanner sc =new Scanner(System.in);
- 	
+   
 	 System.out.println("Enter the value of a:");
-	  a =sc.nextInt();
-	 
+	  a =  Utility.integervalue();
 
 	 System.out.println("Enter the value of b:");
-	 b=sc.nextInt();
+	 b =  Utility.integervalue();
 	 
 	 
 	 System.out.println("Enter the value of c:");
-	 c=sc.nextInt();
+	 c = Utility.integervalue();
 	 
 	 
 	 System.out.println("1. a + b *c");
@@ -45,7 +42,7 @@ public class IntOpt {
 	 System.out.println("4.  a % b + c");
 	 
 	 System.out.println("Enter the Number:");
-	 num=sc.nextInt();
+	 num = Utility.integervalue();
 	 
 	result =Utility.integerop(a, b, c, num, value);
 	

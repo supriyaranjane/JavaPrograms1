@@ -21,18 +21,17 @@ public class DoubleOpt {
 	public static void main(String args[]) {
 		
 	    double a,b,c,value=0,num,result;
-	     Scanner sc =new Scanner(System.in);
 	 	
 		 System.out.println("Enter the value of a:");
-		  a =sc.nextInt();
+		  a = Utility.doublevalue();
 		 
 
 		 System.out.println("Enter the value of b:");
-		 b=sc.nextInt();
+		 b =  Utility.doublevalue();
 		 
 		 
 		 System.out.println("Enter the value of c:");
-		 c=sc.nextInt();
+		 c= Utility.doublevalue();
 		 
 		 
 		 System.out.println("1. a + b *c");
@@ -45,13 +44,13 @@ public class DoubleOpt {
 		 System.out.println("4.  a % b + c");
 		 
 		 System.out.println("Enter the Number:");
-		 num=sc.nextInt();
+		 num=Utility.doublevalue();
+		 
 		 
 		result =Utility.doubleop(a, b, c, num, value);
 		
 		System.out.println("the result is:"+result);
 		 
-			sc.close();
-
+		
      }
 }

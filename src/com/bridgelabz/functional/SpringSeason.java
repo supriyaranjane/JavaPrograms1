@@ -1,6 +1,6 @@
 /******************************************************************************
  *  
- *  Purpose: 
+*  Purpose: 
  *
  *  @author  Supriya Ranjane
  *  @version 1.5
@@ -11,7 +11,6 @@
 package com.bridgelabz.functional;
 
 
-import java.util.Scanner;
 
 import com.bridgelabz.utility.Utility;
 
@@ -21,21 +20,19 @@ public class SpringSeason {
 
 	public static void main(String args[]) {
 		
-	    int m,d;
-	     Scanner sc =new Scanner(System.in);
+	    int month,day;
+	
 	 	
 		 System.out.println("Enter the Month:");
-		  m=sc.nextInt();
+		  month=Utility.integervalue();
 		 
 
 		 System.out.println("Enter the Day:");
-		 d=sc.nextInt();
+		 day=Utility.integervalue();
 		 
 		 
 		 
-		 Utility.spring(m,d);
-		 sc.close();
-		 
-
+		 Utility.spring(month,day);
+		
 }
 }

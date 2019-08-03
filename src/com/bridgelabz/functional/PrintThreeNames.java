@@ -20,11 +20,11 @@ public class PrintThreeNames {
 	 public static void main(String args[])
 	 {
 		 
-		 Scanner sc =new Scanner(System.in);
+	 Scanner sc =new Scanner(System.in);
 	
 		 System.out.println("Enter the Three Names:");
 		 
-		 String inputString =sc.nextLine();
+		 String inputString = sc.nextLine();
 		 
 		 String outputString = Utility.reverseSentence(inputString);
 		 

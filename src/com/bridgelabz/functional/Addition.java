@@ -19,24 +19,21 @@ public class Addition
 	
 	public static void main(String []args)
 	{
-		//Utility utility= new Utility();
-		Scanner sc=new Scanner(System.in);
 		
 		int number1,number2,result;
 		
 		System.out.println("We need to add a two integers");
 		
 		System.out.println("Enter a first integer:");
-		number1 = sc.nextInt();
+		number1 = Utility.integervalue();
 		
         System.out.println("Enter a Second integer:");
-		number2 = sc.nextInt();
+		number2 = Utility.integervalue();
 		
 		result=Utility.add(number1,number2) ;
 		 
 	    System.out.println("Addtion of two integer is:" +result);
-	        
-	    sc.close();
+	    
 		}
 
 }
