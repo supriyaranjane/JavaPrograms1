@@ -437,6 +437,134 @@ public static double trigop(double degree) {
 	return rad;
 }
 
+/*****************************************************************************************************
+ * @param times It takes input you want to be tossed.
+ * @return 
+ *****************************************************************************************************/
+public static int flipcoin(int times)
+{
+	double heads = 0;
+	for(int i=0;i<times;i++)
+	{
+		if (Math.random() > 0.5)
+		{
+			heads++;
+		}
+	}
+	System.out.println("heads percentage is " + (float) (heads / times) * 100);
+	System.out.println("tails percentage is " + (float) (times - heads) / times * 100);
+	return 0;
+	
+}
+
+
+/**
+ * @param i : For incrementing n
+ * @param n :Enter n Nubers
+ * @return : power of 2^n
+ */
+public static int powerof2(int i,int n)
+{
+	
+	
+     i = 0;              
+    int powerOfTwo = 1;       
+
+   
+    while (i <= n) {
+      System.out.println(i + " " + powerOfTwo);  
+        powerOfTwo = 2 * powerOfTwo;                
+        i = i + 1;
+	
+	
+    }
+	return powerOfTwo;
+}
+
+
+/**
+ * @param n Enter the N numbers
+ * @return
+ */
+public static double harmonicnumber(double n)
+{
+	
+	double sum = 0.0;
+    for (int i = 1; i <= n; i++) {
+        sum += 1.0 / i;
+    }
+
+    System.out.println(sum);
+    return 0;
+
+	
+}
+
+
+/**
+ * @param c : Enter4 the number which is a non-negative number.
+ * @return Square root of non negative number
+ */
+public static double sqrt(double c)
+{
+	
+
+	double epsilon = 1.0e-15; 
+		
+	double t = c;
+		
+		
+	while (Math.abs(t - c/t) > epsilon*t)
+	{
+           t = (c/t + t) / 2.0;
+     }
+
+ 
+        System.out.println(t);
+        
+        return t;
+}
+
+
+/**
+ * @param s1 : Enter the lower limit
+ * @param s2 : Enter the upper limit
+ * @return   : Return the output as a prime numbers in between the range.
+ */
+public static int primenumber(int s1,int s2)
+
+{
+	int flag = 0,i,j;
+	
+       System.out.println ("The prime numbers in between the entered limits are :");
+
+	     for(i = s1; i <= s2; i++)
+    {
+        for( j = 2; j < i; j++)
+        {
+            if(i % j == 0)
+            {
+                flag = 0;
+                break;
+            }
+            else
+            {
+                flag = 1;
+            }
+        }
+        if(flag == 1)
+        {
+            System.out.println(i);
+        }
+        
+    }
+	     
+	     return i;
+}
+
+
+
+
 }
 
 

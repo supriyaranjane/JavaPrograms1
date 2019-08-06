@@ -23,9 +23,13 @@ public class WindChill {
 		System.out.println("Enter value of temprature:");
 		temprature = Utility.doublevalue();
 		
+		 //temprature  = Integer.parseInt(args[0]);
+
 		System.out.println("Enter value of speed:");
 		speed= Utility.doublevalue();
       
+		 //speed  = Integer.parseInt(args[1]);
+
 		
         System.out.println("Temperature = " + temprature);
         System.out.println("Wind speed  = " + speed);
