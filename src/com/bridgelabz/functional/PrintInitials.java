@@ -1,6 +1,7 @@
 /****************************************************************************
  *  
- *  Purpose : 
+ *  Purpose : Takes initials as input and prints the initials
+using nine rows of asterisks.
  *
  *  @author  Supriya Ranjane
  *  @version 1.20

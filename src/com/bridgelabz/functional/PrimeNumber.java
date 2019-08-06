@@ -1,7 +1,7 @@
 
 /****************************************************************************
  *  
- *  Purpose : takes a range of number as input and outputs the Prime
+ *  Purpose : Takes a range of number as input and outputs the Prime
 Numbers in that range.
  *
  *  @author  Supriya Ranjane
@@ -30,7 +30,7 @@ public class PrimeNumber {
 	         
 	     
 	         
-	           Utility.primenumber(s2, s2);
+	       i=    Utility.primenumber(s1, s2);
 	       
 	      // System.out.println(result );
 	     
