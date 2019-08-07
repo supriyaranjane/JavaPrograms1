@@ -563,6 +563,12 @@ public static int primenumber(int s1,int s2)
 }
 
 
+/********************************************************
+ * @param arr : Enter the elements of arrays.
+ * 
+ * @param size:  Size of array.
+ *******************************************************/
+
 public static void printRepeating(int arr[], int size)  
 { 
     int i, j; 
@@ -575,9 +581,46 @@ public static void printRepeating(int arr[], int size)
                 System.out.print(arr[i] + " "); 
         } 
     } 
-} 
+}  
 
 
+
+/**********************************************************************
+ * @param i : For finding the index position of element in array.
+ * @param n : Enter the Number of Elements which we want to insert
+ *
+ **********************************************************************/
+
+
+public static void largestelements(int i,int n)
+{
+	     int temp,j;
+	    
+	     int a[]= new int[n];
+
+		
+		
+		for(i=0;i<n;i++)
+		{
+			for(j = i + 1; j < n; j++)
+			{
+				if(a[i]>a[j]) {
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+				}
+			}
+		}
+   
+}
+
+
+
+public  static boolean isPrime(int n) {
+
+	boolean[] primes=new boolean[10000]; 
+    return primes[n]; 
+}
 
 }
 
