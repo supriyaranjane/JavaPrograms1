@@ -74,7 +74,7 @@ public class Utility {
 	 ***************************************/
 	public static String reverseSentence(String inputString)
 	 {
-		 String[] words = inputString.split("\\s");
+		 String[] words = inputString.split("\\s*");
 		 
 		 String outputString ="";
 		 
@@ -615,13 +615,128 @@ public static void largestelements(int i,int n)
 }
 
 
+/*********************************************************************************
+ * @param n :Enter the number to find the factors of it.
+ **********************************************************************************/
+public static void primeFactors(int n) 
+{ 
+   
+    while (n%2==0) 
+    { 
+        System.out.print(2 +" "); 
+        n =n/2; 
+    } 
 
-public  static boolean isPrime(int n) {
+    for (int i = 3; i <= Math.sqrt(n); i = i + 2) 
+    { 
+       
+        while (n%i == 0) 
+        { 
+            System.out.print(i + " "); 
+            n = n/i; 
+        } 
+    } 
 
-	boolean[] primes=new boolean[10000]; 
-    return primes[n]; 
+   
+    if (n > 2)
+    	
+        System.out.print(n); 
+} 
+
+
+/*****************************************************************************************
+ * @param roll : It returns which Number is occurs maximum times.
+ *****************************************************************************************/
+public static void rolldie(int roll)
+{
+	
+
+	int Sides = 6;   
+    
+    roll = (int) (Math.random() * Sides) + 1;
+    
+    System.out.println(roll);
+
+	
 }
 
+
+/*************************************************************************************
+ * @param n :Enter a number for checking the given number is Happy number or not.
+ *
+ * @return : Return sum.
+ *************************************************************************************/
+public static int happy(int n)
+{
+	int  s =0;
+	 int d=0;
+	
+	while(n!=0)
+	{
+		d = n % 10;
+		s=s+(d*d);
+		n=n/10;
+		
+		
+	}return s;
 }
+
+/****************************************************************************
+ * @param n:Enter the number for checking the number is armstrong or noot
+ * @return : Return sum
+ ****************************************************************/
+public static int armstrong(int n)
+{
+	int sum =0;
+	int rem =0;
+	while(n!=0)
+	{
+		rem = n% 10;
+		sum =sum+rem*rem*rem;
+		n =n/10;
+	}return sum;
+}
+
+
+/**
+ * @param goal : Enter the value of goal
+ * @param stake :  Enter the value of stake
+ * @param number  Enter the value of number
+ */
+public static void gamlar(int goal,int stake,int number) {
+	
+int bets=0,win=0;
+ 
+ for(int i=0;i<number;i++) {
+	 
+	 int cash =stake;
+	 
+	 while(cash > 0 && cash<goal) {
+		 bets++;
+	 if(Math.random()<0.5)
+		 cash++;
+	 else
+		 cash--;
+	 }
+	 if(cash==goal)
+		 win++;
+ }
+	 System.out.println("Win is:"+win);
+	 System.out.println("Percentage of win is:"+100*win/number);
+	 System.out.println("Pertcentage of loss :"+100*(number-win)/number);
+	 System.out.println("Total bets are:"+bets);
+		 
+    }
+	 
+           
+ 
+        
+
+
+
+}
+
+
+
 
 
