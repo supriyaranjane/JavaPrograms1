@@ -728,6 +728,76 @@ int bets=0,win=0;
 		 
     }
 	 
+/**
+ * @param n : Enter the number which you want to check the number is armstrong or not.
+ */
+public static void armstrong1(int n)
+{
+	int length=0;
+	
+	while(n!=0)
+	{
+		n=n/10;
+		length = length+1;
+		
+	}
+	int mul=0;
+	
+	while(n>0)
+	{
+		int rem = n%10;
+		
+		for(int i=0;i<length;i++)
+		{
+			mul=mul+rem;
+		}
+		
+	}
+	
+	if(n==mul)
+	{
+		System.out.println("The number is armstrong number ");
+	}
+	else
+	{
+		System.out.println("The number is not  a armstrong number ");
+	}
+}
+	
+
+
+
+	/***************************************************************************
+	 * @param n : enter a number.
+	 * @return : returns the decimal number.
+	 ***************************************************************************/
+	public static int swapnible(int n)
+	{
+		
+		return (( n & 0x0F ) << 4 | (n & 0xF0) >> 4);
+	}
+/*
+	
+	public static void binary(int n)
+	{
+		int a =0,count=0;
+		String s=" ";
+		while(n >0)
+		{
+			a=n%2;
+			if(a==1)
+			{
+				count++;
+			}
+			
+		s=s+" "+a;
+		n=n/2;
+			
+			
+			
+		}
+	}*/
+	
            
  
         
