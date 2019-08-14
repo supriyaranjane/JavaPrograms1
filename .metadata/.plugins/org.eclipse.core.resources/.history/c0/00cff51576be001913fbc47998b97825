@@ -1,0 +1,186 @@
+/******************************************************************************
+ *  Purpose:  
+ *  @author  Ranjane Supriya
+ *  @version 1.33
+ *  @since   14-08-2019
+ *
+ ******************************************************************************/
+
+package com.bridgelabz.functional;
+
+import com.bridgelabz.utility.Utility;
+
+public class MathFunction {
+
+
+	public static void  binary(int n)
+	{
+			
+			int a =0,count=0;
+			String s=" ";
+			while(n >0)
+			{
+				a=n%2;
+				if(a==1)
+				{
+					count++;
+				}
+				
+			s=s+""+a;
+			n=n/2;
+				
+		  
+			
+			}
+
+			System.out.println("The binary Number is:"+s);
+	}
+			
+	/*
+	public static double harmonicnumber(double n)
+			{
+				
+				double sum = 0.0;
+			    for (int i = 1; i <= n; i++) {
+			        sum += 1.0 / i;
+			    }
+
+			    System.out.println(sum);
+			    return 0;
+
+				
+			}*/
+	//for finding sin angle of degree	
+			
+			public static double sin(double degree) {
+				
+				double rad = Math.toRadians(degree);
+				
+				double sin = Math.sin(degree);
+				
+		
+			     System.out.println("Sin ("+degree+")="+sin);
+			
+				
+				
+				return rad;
+			}
+			
+		//for finding cosine angle of degree	
+			
+			public static double cos(double degree) {
+				
+				double rad = Math.toRadians(degree);
+				double cos = Math.cos(degree);
+				
+			System.out.println("Cos ("+degree+")="+cos);
+				
+			
+		    return rad;
+			
+			}
+			
+			public static boolean isPrime(int n)
+			{
+				if(n<=1)
+				{
+					return true;
+					
+				}
+				
+				
+				else
+				  {  
+				   for(int i=2;i<=n/2;i++)
+				     { 
+					   
+					   if(n%2==0)
+						   return true;
+				     }
+				   
+				   return false;
+				     }
+			}
+				   
+				     
+			
+			
+			
+	
+			
+			public static void main(String[] args)
+			{
+				
+				System.out.println("1.Harmonic Number");
+				System.out.println("2.sin of an angle");
+				System.out.println("3.cosine of an angle");
+				System.out.println("4.Binary Number");
+				System.out.println("5.Prime Number");
+				
+				System.out.println("Enter the Number which we want to perform the oprations:");
+				int num= Utility.integervalue();
+				
+				if(num==1)
+				{
+					System.out.println("Enter the Number:");
+					 int n= Utility.integervalue();
+					 
+			  double result=Utility.harmonicnumber(n);
+			//  System.out.println(result);
+					 
+					 
+				}
+				
+				
+				if(num==2)
+				{System.out.println("Enter value of Degree");
+		     	double degree=Utility.doublevalue();
+					 
+				 
+				 // double result=Utility.sin(degree);
+					 
+					 sin(degree);
+				}
+				
+
+				if(num==3)
+				{System.out.println("Enter value of Degree");
+		     	double degree=Utility.doublevalue();
+					 
+					
+					 cos(degree);
+					 
+				}
+				
+				
+				if(num==4)
+				{
+					System.out.println("Enter the Number:");
+					 int n= Utility.integervalue();
+					 
+				binary(n);
+					 
+					 
+				}
+				
+				if(num==5)
+				{
+					System.out.println("Enter the Number:");
+					 int n= Utility.integervalue();
+					 
+			if(isPrime(n))
+			{
+				System.out.println("true");
+			}
+			else
+			{
+				System.out.println("False");
+			}
+				
+					 
+					 
+				}
+			}
+		
+	}
+

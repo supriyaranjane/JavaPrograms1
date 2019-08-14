@@ -1,0 +1,76 @@
+/******************************************************************************
+ *  Purpose:  Program on String functions.
+ *  @author  Ranjane Supriya
+ *  @version 1.31
+ *  @since   12-08-2019
+ *
+ ******************************************************************************/
+
+
+package com.bridgelabz.functional;
+
+import java.util.Arrays;
+
+import com.bridgelabz.utility.Utility;
+
+public class StringFunction {
+	
+	static boolean areAnagram(char[] str1, char[] str2) 
+    { 
+        
+        int n1 = str1.length; 
+        int n2 = str2.length; 
+  
+        
+        if (n1 != n2) 
+            return false; 
+  
+       
+        Arrays.sort(str1); 
+        Arrays.sort(str2); 
+  
+        
+        for (int i = 0; i < n1; i++) 
+            if (str1[i] != str2[i]) 
+                return false; 
+  
+        return true; 
+    } 
+	
+	// to check the string is palindrome or not
+	public static boolean palindrome(String inputstring)
+	{
+		String reverse="";
+		 int length = inputstring.length();   
+	      for ( int i = length - 1; i >= 0; i-- )  
+	         reverse = reverse + inputstring.charAt(i);  
+	      if (inputstring.equals(reverse))  
+	         System.out.println("Entered string is a palindrome.");  
+	      else  
+	         System.out.println("Entered string is not  a palindrome.");
+		return true;
+	}
+	
+	
+	
+	 public static void main(String args[]) 
+	    { 
+		 //code for string is anagram or not
+	        char str1[] = { 't', 'e', 's', 't' }; 
+	        char str2[] = { 't', 't', 'e', 'w' }; 
+	        if (areAnagram(str1, str2)) 
+	            System.out.println("The two strings are"
+	                               + " anagram of each other"); 
+	        else
+	            System.out.println("The two strings are not"
+	                               + " anagram of each other"); 
+	        
+	        
+	       
+	          System.out.println("\n\n***To check whether given string is palindrome or not***");
+	        System.out.println("Enter the  string");
+	        String   inputstring=Utility.stringvalue();
+	      	palindrome(inputstring);
+	      	} 
+
+}

@@ -1,0 +1,9 @@
+package com.bridgelabz.functional;
+
+public class prm {
+
+	public static void main(String[] args)
+	{
+		
+			}
+}

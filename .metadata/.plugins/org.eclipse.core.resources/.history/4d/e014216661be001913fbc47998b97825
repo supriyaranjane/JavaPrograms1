@@ -1,0 +1,41 @@
+/******************************************************************************
+ *  Purpose:  
+ *  @author  Ranjane Supriya
+ *  @version 1.33
+ *  @since   14-08-2019
+ *
+ ******************************************************************************/
+
+package com.bridgelabz.functional;
+
+import com.bridgelabz.utility.Utility;
+
+public class MathFunction {
+
+	public static void main(String args[])
+	{
+		
+	//	System.out.println("1.Binary Number:");
+		//System.out.println("2.Harmonic Number:");
+		System.out.println("Enter the Number:");
+		int n =Utility.integervalue();
+			//int n = Integer.parseInt(args[0]);
+			int a =0,count=0;
+			String s=" ";
+			while(n >0)
+			{
+				a=n%2;
+				if(a==1)
+				{
+					count++;
+				}
+				
+			s=s+""+a;
+			n=n/2;
+				
+		  }
+			
+			System.out.println("The binary Number is:"+s);
+		
+	}
+}
